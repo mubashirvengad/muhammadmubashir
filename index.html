@@ -152,57 +152,40 @@
  <div class="container">
     <div class="row">
         <div class="col-md-12">
-        <form  onsubmit="sendEmail(); reset(); return false;">
+        <form  action="https://api.web3forms.com/submit" method="POST">
             <div class="form-row">
               <div class="form-group col-md-6 ">
                 <label for="inputEmail4">Name</label>
-                <input type="text" class="form-control" id="inputName4" placeholder="Name">
+                <input type="text" class="form-control" name="Name" id="inputName4" placeholder="Name">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputPassword4"> Place</label>
-                <input type="text" class="form-control" id="inputPlace4" placeholder="Place">
+                <input type="text" class="form-control" name="Place" id="inputPlace4" placeholder="Place">
               </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6 ">
                   <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  <input type="email" class="form-control" name="Email" id="inputEmail4" placeholder="Email">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputPassword4"> Mobile</label>
-                  <input type="tel" class="form-control" id="inputMobile4" placeholder="Mobile">
+                  <input type="tel" class="form-control" name="Mobile" id="inputMobile4" placeholder="Mobile">
                 </div>
               </div>
 
             <div class="form-group">
               <label for="inputAddress">Message</label>
-              <textarea   class="form-control" cols="30" rows="10" placeholder="type your message her"></textarea>
+              <textarea   class="form-control"  name="Message"cols="30" rows="10" placeholder="type your message her"></textarea>
             </div>
             
             
              <div class="form-group text-center">
             <button type="submit" class="btn btn-primary" style="width: 100%;">submit</button>
              </div>
-            <script src="https://smtpjs.com/v3/smtp.js"></script>
-             <script> function sendEmail() {
-              Email.send({
-                secureToken:" 0f016744-3fca-41a7-a6a6-34de4eb68686 ",
-                 Host : "smtp.gmail.com",
-                 Username : "muhammadmubashir51661@gmail.com",
-                 Password : "A0033096A20474D7C7DB445EC46C27ED6DDA",
-                 To : 'muhammadmubashir51661@gmail.com',
-                From : document.getElementById("email").Value,
-                 Subject : "new contact form enquiry",
-               Body : "Name:"|document.getElementById("Name").Value,
-           "<br> Email: " : Document.getElementById("Email").Value,
-           "<br> MObile: " : Document.getElementById("Mobile").Value,
-           "<br> Message: " : Document.getElementById("message").Value,
-           "<br> place: " : Document.getElementById("place").Value,
-}).then(
-  message => alert("message send succesfully")
-             ),}
-  </script>
+             <input type="hidden" name="access_key" value="4559244e-d66d-4441-99b2-e4747ffe7f66">
+
           </form>
      </div>
     </div>
